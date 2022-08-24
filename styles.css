@@ -1,13 +1,75 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-div > div {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing; border-box;
+  }
+  
+  .container {
+    position: relative;
+      display: flex;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+  }
+  
+  
+  
+  /* FORM STYLING */
+  /* Toggle hidden attribute */
+  [hidden] {
+    display: none;
+  }
+  
+  fieldset {
+    position: absolute;
+    place-self:center;
+    padding: 20px;
+    background-color: white;
+    border: 5px solid lightblue;
+    border-radius: 5px;
+    height: 300px;
+    width: 
+  }
+  
+  form {
+    display: grid;
+    grid: repeat(5, 1fr);
+    height: auto;
     width: 300px;
-    height: 500px;
-    border: 5px solid black;
-}
-
+    gap: 10px;
+  }
+  
+  form div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  #book-form input {
+    grid-column: 2/3;
+    background-color: lightyellow;
+    padding: 5px;
+  }
+  
+  /* GRID CARDS */
+  
+  .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+    place-content: center;
+  /*   border: 2px solid green; */
+  }
+  
+  .card {
+    display: grid;
+    place-content: center;
+    border: 5px solid darkgreen;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .card div {
+    text-align: center
+  }
